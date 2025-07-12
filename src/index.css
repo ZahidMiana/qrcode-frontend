@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  body {
+    @apply font-inter antialiased;
+  }
+  
+  html, body, #root {
+    @apply h-full;
+  }
+}
+
+@layer components {
+  .glass-morphism {
+    @apply bg-glass-bg backdrop-blur-glass border border-glass-border;
+  }
+  
+  .neon-border {
+    @apply border-2 border-transparent bg-gradient-to-r from-neon-blue to-neon-pink bg-clip-border;
+  }
+  
+  .glow-text {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-neon-blue to-neon-pink rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply from-neon-pink to-neon-blue;
+}
